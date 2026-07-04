@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuestPort — Gamified travel journal</title>
+  <meta name="description" content="QuestPort turns your travels into a quest. Collect countries, complete challenges, and keep a beautiful photo journal. Private by design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #131515;
+      --surface: #1c1e1e;
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #ffffff;
+      --muted: #969aa2;
+      --muted2: #c6cad0;
+      --accent: #4BB8E7;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 64px 24px;
+    }
+    .pin {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 28px;
+    }
+    .kicker {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(40px, 8vw, 64px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-top: 14px;
+    }
+    .tagline {
+      color: var(--muted2);
+      font-size: clamp(16px, 3vw, 19px);
+      font-weight: 500;
+      margin-top: 16px;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 36px;
+      max-width: 640px;
+    }
+    .chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted2);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 9px 16px;
+    }
+    .cta {
+      margin-top: 44px;
+      display: inline-block;
+      background: var(--accent);
+      color: #0c1416;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      border-radius: 999px;
+      padding: 14px 28px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a { color: var(--muted2); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="pin" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M32 4C19.85 4 10 13.85 10 26c0 14.5 18.2 31.6 20.6 33.8a2 2 0 0 0 2.8 0C35.8 57.6 54 40.5 54 26 54 13.85 44.15 4 32 4Z" fill="#4BB8E7"/>
+      <circle cx="32" cy="26" r="11" fill="#131515"/>
+      <path d="M32 19a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm0 2.5a4.5 4.5 0 0 1 4.5 4.5c0 .5-.08.97-.23 1.42L32 26l-4.27 1.42A4.5 4.5 0 0 1 32 21.5Z" fill="#4BB8E7"/>
+    </svg>
+    <div class="kicker">Gamified travel</div>
+    <h1>QuestPort</h1>
+    <p class="tagline">Explore the world. Collect the memories. Never stop discovering.</p>
+    <div class="features">
+      <span class="chip">Collect all 195 countries</span>
+      <span class="chip">100+ travel quests</span>
+      <span class="chip">Scratch-style world map</span>
+      <span class="chip">Private photo journal</span>
+    </div>
+    <span class="cta">Coming soon to the App Store</span>
+  </main>
+  <footer>
+    <span>&copy; 2026 Luke Twyford</span>
+    <a href="/privacy/">Privacy Policy</a>
+    <a href="mailto:hello@questport.app">hello@questport.app</a>
+  </footer>
+</body>
+</html>
