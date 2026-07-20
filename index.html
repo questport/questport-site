@@ -182,26 +182,26 @@
       align-items: flex-end;
       margin: clamp(48px, 7vw, 80px) auto 0;
       max-width: 900px;
-      padding-bottom: 0;
+      padding-bottom: 48px; /* room for the tilted side phones' corners */
     }
-    .hero-phones img {
+    .hero-phones .ph {
       border-radius: 26px;
       border: 1px solid var(--border);
       background: var(--surface);
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      aspect-ratio: 440 / 900;
+    }
+    .hero-phones .ph img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: -12.6%; /* hide the baked-in status bar */
     }
     .hero-phones .side { width: min(24vw, 230px); z-index: 1; }
     .hero-phones .center { width: min(30vw, 280px); z-index: 2; }
     .hero-phones .left { transform: rotate(-5deg) translate(26px, 18px); }
     .hero-phones .right { transform: rotate(5deg) translate(-26px, 18px); }
-    .hero-fade {
-      position: relative;
-      height: 110px;
-      margin-top: -110px;
-      background: linear-gradient(to bottom, transparent, var(--bg));
-      z-index: 3;
-      pointer-events: none;
-    }
 
     /* ---------- stat band ---------- */
     .stats-band {
@@ -257,13 +257,21 @@
       margin-top: clamp(64px, 9vw, 110px);
     }
     .feature:nth-child(even) { flex-direction: row-reverse; }
-    .feature .shot { flex: 0 0 min(38vw, 300px); }
-    .feature .shot img {
-      width: 100%;
+    .feature .shot {
+      flex: 0 0 min(38vw, 300px);
+      align-self: center;
       border-radius: 26px;
       border: 1px solid var(--border);
       background: var(--surface);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+      aspect-ratio: 440 / 900;
+    }
+    .feature .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: -12.6%; /* hide the baked-in status bar */
     }
     .feature .copy { flex: 1; }
     .feature .copy .tag {
@@ -405,13 +413,20 @@
       max-width: 1040px;
       padding: 0 24px;
     }
-    .screens img {
+    .screens .frame {
       width: min(40vw, 220px);
-      height: auto;
       border-radius: 22px;
       border: 1px solid var(--border);
       background: var(--surface);
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      aspect-ratio: 440 / 900;
+    }
+    .screens .frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: -12.6%; /* hide the baked-in status bar */
     }
 
     /* ---------- final cta ---------- */
@@ -514,18 +529,17 @@
       </a>
     </div>
     <div class="hero-phones">
-      <img class="side left" src="/screenshots/web/stamps.webp" alt="Stamp collection with flag cards for visited countries" width="440" height="956" />
-      <img class="center" src="/screenshots/web/home.webp" alt="QuestPort home screen with a world map of visited countries and traveller level" width="440" height="956" />
-      <img class="side right" src="/screenshots/web/journal.webp" alt="Travel journal with photo entries for each trip" width="440" height="956" />
+      <div class="ph side left"><img src="/screenshots/web/stamps.webp" alt="Stamp collection with flag cards for visited countries" width="440" height="956" /></div>
+      <div class="ph center"><img src="/screenshots/web/home.webp" alt="QuestPort home screen with a world map of visited countries and traveller level" width="440" height="956" /></div>
+      <div class="ph side right"><img src="/screenshots/web/journal.webp" alt="Travel journal with photo entries for each trip" width="440" height="956" /></div>
     </div>
-    <div class="hero-fade"></div>
   </header>
 
   <div class="stats-band reveal">
     <div class="stat"><div class="num">195</div><div class="lbl">Countries to collect</div></div>
     <div class="stat"><div class="num">100+</div><div class="lbl">Travel quests</div></div>
     <div class="stat"><div class="num">4</div><div class="lbl">Medal tiers</div></div>
-    <div class="stat"><div class="num">0</div><div class="lbl">Accounts required</div></div>
+    <div class="stat"><div class="num">55</div><div class="lbl">Traveller levels</div></div>
   </div>
 
   <div class="features-wrap">
@@ -630,10 +644,10 @@
   </section>
 
   <div class="screens reveal">
-    <img src="/screenshots/web/home.webp" alt="QuestPort home screen with world map and traveller level" width="440" height="956" loading="lazy" />
-    <img src="/screenshots/web/stamps.webp" alt="Stamp collection showing flag cards for visited countries" width="440" height="956" loading="lazy" />
-    <img src="/screenshots/web/journal.webp" alt="Travel journal with photo entries for each trip" width="440" height="956" loading="lazy" />
-    <img src="/screenshots/web/quest.webp" alt="Completed quest medal for visiting three continents" width="440" height="956" loading="lazy" />
+    <div class="frame"><img src="/screenshots/web/home.webp" alt="QuestPort home screen with world map and traveller level" width="440" height="956" loading="lazy" /></div>
+    <div class="frame"><img src="/screenshots/web/stamps.webp" alt="Stamp collection showing flag cards for visited countries" width="440" height="956" loading="lazy" /></div>
+    <div class="frame"><img src="/screenshots/web/journal.webp" alt="Travel journal with photo entries for each trip" width="440" height="956" loading="lazy" /></div>
+    <div class="frame"><img src="/screenshots/web/quest.webp" alt="Completed quest medal for visiting three continents" width="440" height="956" loading="lazy" /></div>
   </div>
 
   <section class="final">
