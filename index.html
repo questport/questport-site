@@ -100,6 +100,22 @@
       filter: brightness(1.1);
       transform: translateY(-1px);
     }
+    .screens {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 64px;
+      max-width: 1040px;
+    }
+    .screens img {
+      width: min(40vw, 220px);
+      height: auto;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
     footer {
       border-top: 1px solid var(--border);
       padding: 24px;
@@ -128,6 +144,12 @@
       <span class="chip">Private photo journal</span>
     </div>
     <a class="cta" href="https://apps.apple.com/us/app/questport/id6784425676" target="_blank" rel="noopener">Out now on the App Store</a>
+    <div class="screens">
+      <img src="/screenshots/web/home.webp" alt="QuestPort home screen with a world map of visited countries and traveller level" width="440" height="956" loading="lazy" />
+      <img src="/screenshots/web/stamps.webp" alt="Stamp collection showing flag cards for visited countries" width="440" height="956" loading="lazy" />
+      <img src="/screenshots/web/journal.webp" alt="Travel journal with photo entries for each trip" width="440" height="956" loading="lazy" />
+      <img src="/screenshots/web/quest.webp" alt="Completed quest medal for visiting three continents" width="440" height="956" loading="lazy" />
+    </div>
   </main>
   <footer>
     <span>&copy; 2026 Luke Twyford</span>
