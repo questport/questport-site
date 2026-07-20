@@ -93,6 +93,12 @@
       letter-spacing: 0.5px;
       border-radius: 999px;
       padding: 14px 28px;
+      text-decoration: none;
+      transition: filter 0.15s ease, transform 0.15s ease;
+    }
+    .cta:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
     }
     footer {
       border-top: 1px solid var(--border);
@@ -121,7 +127,7 @@
       <span class="chip">Scratch-style world map</span>
       <span class="chip">Private photo journal</span>
     </div>
-    <span class="cta">Coming soon to the App Store</span>
+    <a class="cta" href="https://apps.apple.com/us/app/questport/id6784425676" target="_blank" rel="noopener">Out now on the App Store</a>
   </main>
   <footer>
     <span>&copy; 2026 Luke Twyford</span>
